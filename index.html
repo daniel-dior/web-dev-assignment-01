@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="daniel logo.jpg">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <div id="demo">
+        <h1>Sign In Successfull</h1> <br><br>
+        <a href="index.html">
+      <input class="button" type="submit" value="back"><br><br></a>
+      </div>
+    <div id="flex">
+      <a href="#">sign in</a>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+       <input type="text" name="fname" id="fullName" placeholder="username"> <br><br>
+      <input type="text" name="fname1" id="email" placeholder="email"><br><br>
+      <input type="text" name="fname2" id="passWord" placeholder="password"> <br><br>
+      <select id="select" name="country" required>
+        <option value="Nigeria" >Nigeria</option>
+        <option value="Andorra">Andorra	</option>
+       <option value="Albania	">Albania	</option>
+       <option value="London">London</option>
+       <option value="Ghana">Ghana</option>
+       <option value="Togo">Togo</option>
+       <option value="England">England</option>
+       <option value="USA">USA</option>
+       <option value="Egypt">Egypt</option>
+      </select><br><br>
+      <input class="button" type="submit" value="sign in"><br><br>
+    </form>
+  </div>
+    </div>
+    <script>
+      console.log("fdf");
+      const demo = document.getElementById('demo');
+      demo.style.display = 'none'
+      const flex = document.getElementById('flex');
+      const fullName = document.getElementById('fullName');
+      const email = document.getElementById('email')
+      const passWord = document.getElementById('passWord')
+      const select = document.getElementById('select')
+  
+      console.log("fullName");
+  
+      function validateForm() {
+        const username = document.forms["myForm"]["fname"];
+        if (username.value === "" , email.value === ""  , passWord.value === ""  ) {
+          alert("content must be field out");
+          return false;
+        } else {
+          // demo.innerHTML = `successfull`;
+          demo.setAttribute('style', 'padding:100px;' , 'font-size:50px;' )
+          flex.style.display = 'none';
+          return false;
+        }
+      }
+    </script>
+</body>
+</html>
